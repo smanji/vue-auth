@@ -25,8 +25,7 @@
     data(){
       return {
         email : "",
-        password : "",
-        password_confirmation : ""
+        password : ""
       }
     },
     methods: {
