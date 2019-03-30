@@ -8,6 +8,7 @@
      <input required v-model="password" type="password" placeholder="Password"/>
      <hr/>
      <button type="submit">Login</button>
+     <button type="button" @click="register()">Register</button>
      <br/>
      <div>{{authStatus}}</div>
    </form>
@@ -35,6 +36,9 @@
         this.$store.dispatch('login', { user: { email, password } })
        		.then(() => this.$router.push('/'))
        		.catch(err => console.log(err))
+      },
+      register: function () {
+      	this.$router.push('/register');
       }
     }
   }

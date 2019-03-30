@@ -14,6 +14,7 @@
 
       <div>
           <button type="submit">Register</button>
+          <button type="button" @click="login()">Login</button>
       </div>
     </form>
   </div>
@@ -39,6 +40,9 @@
         this.$store.dispatch('register', data)
           .then(() => this.$router.push('/'))
           .catch(err => console.log(err))
+      },
+      login: function () {
+        this.$router.push('/login');
       }
     }
   }

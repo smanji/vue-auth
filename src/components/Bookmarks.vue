@@ -1,7 +1,8 @@
 <template>
   <div>
     <h1>Bookmarks</h1>
-    <ul>
+    <div v-if="bookmarks.length === 0">No Bookmarks</div>
+    <ul v-else>
       <li v-for="bookmark in bookmarks" :key="bookmark._id">
         {{ bookmark.url }}
       </li>
